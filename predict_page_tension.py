@@ -32,11 +32,11 @@ def show_predict_page_tension():
         st.write("Min: 0, Max: 20")
         NA_Size= st.number_input("NA Maximum Size (mm)")
         st.write("Min: 0, Max: 20")
-        RCA_Density= st.number_input("RCA Density(kg/$m^3$)")
+        RCA_Density= st.number_input("RCA Density (kg/$m^3$)")
         st.write("Min: 0, Max: 2610")
 
     with col3:
-        NA_Density= st.number_input("NA Density(kg/$m^3$)")
+        NA_Density= st.number_input("NA Density (kg/$m^3$)")
         st.write("Min: 0, Max: 2780")
         RCA_Water_absorption= st.number_input("RCA Water Absorption (%)")
         st.write("Min: 0, Max: 5.3")
@@ -71,5 +71,6 @@ def show_predict_page_tension():
             Tension = xgb_model_tension.predict(X)
             
         st.subheader(f"The Residual Tensile Strength of RAC after Heat Exposure is  {Tension[0]:.2f} ")
+
 
 #show_predict_page_tension()
