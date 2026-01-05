@@ -32,11 +32,11 @@ def show_predict_page_compression():
         st.write("Min: 0, Max: 20")
         NA_Size= st.number_input("NA Maximum Size (mm)")
         st.write("Min: 0, Max: 20")
-        RCA_Density= st.number_input("RCA Density(kg/$m^3$)")
+        RCA_Density= st.number_input("RCA Density (kg/$m^3$)")
         st.write("Min: 0, Max: 2610")
 
     with col3:
-        NA_Density= st.number_input("NA Density(kg/$m^3$)")
+        NA_Density= st.number_input("NA Density (kg/$m^3$)")
         st.write("Min: 0, Max: 2780")
         RCA_Water_absorption= st.number_input("RCA Water Absorption (%)")
         st.write("Min: 0, Max: 5.6")
@@ -70,5 +70,6 @@ def show_predict_page_compression():
             Compressive = xgb_model.predict(X)
         
         st.subheader(f"The Residual Compressive Strength of RAC after Heat Exposure is  {Compressive[0]:.2f} ")
+
 
 #show_predict_page_compression()
